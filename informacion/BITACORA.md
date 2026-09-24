@@ -21,6 +21,18 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (8) — Registro de pedidos y sesiones desde el celular
+- Hook de registro movido de `~/.claude/settings.json` a `.claude/settings.json` del proyecto
+  (usa `$CLAUDE_PROJECT_DIR`): ahora también anota los pedidos hechos desde el celular o la nube.
+- `CLAUDE.md`: nueva sección para sesiones en la nube (git pull/push, Yahoo 403, publicar solo en PC).
+
+### 2026-09-24 (7) — Publicada la versión 1.2.0 (Asistente IA)
+- Aplicado `asistente-ia.patch` (git am). flutter analyze: sin problemas; flutter test: 35 OK.
+- Publicado con OK del usuario: APK 1.2.0+3 en GitHub (inversiones-tienda v1.2.0, SHA-256
+  8ad6e97b…379aee), catálogo de la tienda, web y `agentes/datos.json` en Firebase.
+- Advertido: datos.json es público (solo carteras simuladas) y el asistente envía la cuenta
+  Alpaca a Gemini (plan gratuito: Google puede usar los datos).
+
 ### 2026-09-24 (6) — Asistente IA con los agentes en la app (v1.2.0+3)
 - Nueva pantalla **Más → Asistente IA**: chat con Asistente (general), Trader e Inversionista.
   Botón "Pedir opinión de mi cartera", sugerencias por agente e historial guardado en el teléfono.
