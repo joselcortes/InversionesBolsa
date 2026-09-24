@@ -198,3 +198,11 @@ se copiaron a mano.
 ## 24-09-2026, 3:07:26 p. m.
 
 > sí, publica y borra los archivos
+
+## 24-09-2026, 3:26:06 p. m.
+
+> tengo algo en google cloud?, donde podria guardar todas las instrucciones que te di al iniciar en la carpeta, como el uso de los agentes y todo eso
+
+## 24-09-2026, 3:29:32 p. m.
+
+> me gustaría poder darle ordenes al claude de mi celular y que supoiera lo mismo que sabes ahora, desde cualquier lugar sin tener el pc encendido, que puedo hacer. Ademas tengo una duda con las actualizaciones, si hago algun cambio la app sola detecta que hay actus?. Y si a lo que dijiste de mover el registro

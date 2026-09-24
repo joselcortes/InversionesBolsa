@@ -17,6 +17,19 @@ Chile. Android + versión web en Firebase Hosting. Ver `README.md` para las func
 Después de cada pedido del usuario, agrega una entrada con fecha en `informacion/BITACORA.md` (qué se hizo, archivos,
 decisiones) y actualiza la lista de pendientes.
 
+## Sesiones desde el celular o la nube (claude.ai/code)
+
+- El repo en GitHub (`joselcortes/InversionesBolsa`, privado) es la fuente de verdad. Al empezar,
+  `git pull`; al terminar, commit y push a `main` para que el PC y las demás sesiones lo vean.
+- Lo que el usuario pide queda en `informacion/registro_prompts.md` (hook del proyecto): inclúyelo
+  en el commit.
+- En la nube Yahoo Finance responde HTTP 403: `registrar_mercado.mjs` no descarga; usa los
+  históricos ya guardados e indica su fecha.
+- Publicar la app (`tool/publicar.dart`) solo se puede en el PC: necesita Flutter, la llave de
+  firma (fuera del repo) y Firebase CLI. Desde la nube, deja los cambios en `main` y anota en la
+  bitácora que falta publicar.
+- Rutina diaria en la nube "Inversiones – mercado y carteras" (lun-vie 22:00 UTC).
+
 ## Estructura
 
 `lib/models` (datos), `lib/services` (Alpaca REST/WebSocket, almacenamiento, notificaciones,
