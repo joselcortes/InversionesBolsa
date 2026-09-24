@@ -21,6 +21,21 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (5) — Revisión diaria automática (nube)
+- `node tool/registrar_mercado.mjs` volvió a fallar con HTTP 403 desde la nube; se usó el cierre
+  real del **2026-09-23** (caída generalizada: SPY -0,72 %, GOOGL -3,80 %) ya subido por el usuario.
+- **Trader**: AAPL y NVDA retrocedieron con el mercado sin tocar stop/objetivo; ninguna condición
+  de vigilancia se cumplió (MSFT 500,59 < 518, GOOGL 337,83 < 360, cada vez más lejos); se descartó
+  "comprar la caída" en GOOGL/AMZN por falta de tendencia a favor. **No operó.** Cartera en
+  US$ 9.965,81 (-0,34 % desde el inicio, mejor que SPY -0,74 % gracias al 54 % en efectivo).
+  Reporte: `informacion/reportes/2026-09-24-trader.md`.
+- **Inversionista**: valorizó en US$ 9.923,05 (-0,72 %, prácticamente igual a SPY -0,74 %); la
+  caída de GOOGL solo desvió su peso -0,25 pp (muy bajo el umbral de 5 pp), sin tesis rota; no
+  correspondía aporte (es en octubre). **Sin cambios en posiciones.**
+  Reporte: `informacion/reportes/2026-09-24-inversionista.md`.
+- Nota: la primera pasada de esta revisión se hizo por error con el cierre del 22-sep (antes de
+  que llegara el push del usuario con el 23-sep); se descartó y se rehizo con el dato correcto.
+
 ### 2026-09-24 (4) — Prueba de la rutina en la nube
 - Yahoo Finance responde **HTTP 403** desde la nube (en el PC funciona). La rutina no puede
   descargar precios ahí; pendiente: abrir la red del entorno o usar Alpaca como fuente.
