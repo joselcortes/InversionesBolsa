@@ -21,6 +21,12 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (2) — Proyecto en git
+- `git init` (rama main) y primer commit local (233 archivos). Revisados secretos: ninguno;
+  keystore, key.properties, local.properties, build/ y releases/descargas/ quedan fuera.
+- Pendiente (lo hace el usuario): crear repo privado en GitHub y subirlo; luego `/remote-control`
+  y rutina diaria en la nube (registrar mercado + revisar carteras).
+
 ### 2026-09-24 (1) — Control desde el celular (consulta)
 - Se explicaron las opciones para operar el proyecto desde el celular: Remote Control (sesión del PC
   controlada desde la app Claude) y sesiones/rutinas en la nube (claude.ai/code), que requieren
