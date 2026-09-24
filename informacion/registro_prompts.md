@@ -174,3 +174,27 @@ se copiaron a mano.
 ## 24-09-2026, 1:24:22 a. m.
 
 > solo github
+
+## 24-09-2026, 2:01:58 a. m.
+
+> quiero q subas el de la tienda a github
+
+## 24-09-2026, 2:06:43 a. m.
+
+> cmo fucnciona si quiero descargar una actu
+
+## 24-09-2026, 2:16:38 a. m.
+
+> <pasted_content id="b40f">
+> "Aplica
+> asistente-ia.patch con git am, corre
+> flutter analyze y flutter test, corrige lo
+> que falle y luego publica con dart run
+> tool/publicar.dart -- notas "Nuevo
+> Asistente IA con agentes Trader e
+> Inversionista""
+> </pasted_content id="b40f">
+
+## 24-09-2026, 3:07:26 p. m.
+
+> sí, publica y borra los archivos
