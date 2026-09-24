@@ -19,6 +19,8 @@ decisiones) y actualiza la lista de pendientes.
 
 ## Sesiones desde el celular o la nube (claude.ai/code)
 
+Configuración completa (GitHub, celular, rutina, publicación): `informacion/CONFIGURACION.md`.
+
 - El repo en GitHub (`joselcortes/InversionesBolsa`, privado) es la fuente de verdad. Al empezar,
   `git pull`; al terminar, commit y push para que el PC y las demás sesiones lo vean.
 - Si el push a `main` es rechazado, sube a la rama de la sesión (ej. `claude/...`) y abre un pull

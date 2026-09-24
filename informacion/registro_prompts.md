@@ -210,3 +210,15 @@ se copiaron a mano.
 ## 24-09-2026, 3:36:19 p. m.
 
 > me dice que no tengo las credenciales para hacer cambios desde mi celular ni hacer push
+
+## 24-09-2026, 3:39:19 p. m.
+
+> si te doy acceso a mi celular por depuracion puedes hacerlo tu?, ademas puedo conectarme por enlace movil y reflejas la pantalla
+
+## 24-09-2026, 3:45:33 p. m.
+
+> tiene acceso de escritura, pero yo quiero que claude desde mi celular pueda hacer cambios, parace que no esta sincronizado con github
+
+## 24-09-2026, 3:49:43 p. m.
+
+> guarda este chat en configuraciones

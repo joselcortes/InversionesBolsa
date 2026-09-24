@@ -21,6 +21,11 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (10) — Configuración guardada
+- Nuevo `informacion/CONFIGURACION.md`: resumen de esta sesión (GitHub, Claude desde el celular,
+  rutina en la nube, registro de pedidos, publicación y Asistente IA). Enlazado desde `CLAUDE.md`.
+- Diagnóstico: el celular usaba el chat normal (no Claude Code), que no puede hacer push.
+
 ### 2026-09-24 (9) — Push rechazado desde el celular
 - Las sesiones del celular no pueden hacer push (por eso el Asistente IA llegó como .patch). La
   rutina diaria sí pudo subir a main. Causa probable: la app de GitHub de Claude sin permiso de
