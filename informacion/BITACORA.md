@@ -22,6 +22,16 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 — Revisión automática (nube)
+- Segunda pasada de la rutina diaria del mismo día: `registrar_mercado.mjs` volvió a fallar con
+  HTTP 403 (Yahoo bloqueado desde la nube); el cierre sigue siendo el 2026-09-23, sin novedades
+  respecto a la revisión de esta mañana.
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT (518) y GOOGL (360) sin activarse. No se registraron operaciones nuevas.
+- **Inversionista**: sin cambios (US$ 9.923,05, −0,72 % vs inicio); ninguna posición se desvía más
+  de 5 pp de su peso objetivo; no corresponde aporte (es en octubre).
+- Reporte: `informacion/reportes/2026-09-24-revision.md`.
+
 ### 2026-09-24 (11) — Google Cloud CLI en el PC (pedido desde el celular, Remote Control)
 - Instalado Google Cloud CLI 586 en `%LOCALAPPDATA%\google-cloud-sdk` (zip oficial, sin admin;
   winget solo ofrecía instalación de equipo con UAC). Agregado al PATH del usuario.
