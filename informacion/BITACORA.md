@@ -103,6 +103,10 @@ Lo más reciente va arriba en cada sección.
 
 ## Decisiones
 
+### 2026-09-24
+- El repositorio vive solo en **GitHub** (privado). No se usa GitLab: Claude Code en la nube y
+  en el celular solo trabaja con GitHub.
+
 ### 2026-09-23 (2)
 - "Cuentas agrupadas" se llamarán **Carteras**: cada una con capital, posiciones, ganancia y
   estrategia propias; pueden ser simuladas o reales.

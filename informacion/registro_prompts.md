@@ -162,3 +162,15 @@ se copiaron a mano.
 ## 24-09-2026, 1:07:24 a. m.
 
 > revisa el resultado de la prueba
+
+## 24-09-2026, 1:20:23 a. m.
+
+> donde esta alojado el proyecto?
+
+## 24-09-2026, 1:23:45 a. m.
+
+> puedes subir el proyecto a gitlab para ordenarle desde mi celu
+
+## 24-09-2026, 1:24:22 a. m.
+
+> solo github
