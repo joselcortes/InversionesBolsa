@@ -21,6 +21,12 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (9) — Push rechazado desde el celular
+- Las sesiones del celular no pueden hacer push (por eso el Asistente IA llegó como .patch). La
+  rutina diaria sí pudo subir a main. Causa probable: la app de GitHub de Claude sin permiso de
+  escritura o push a main restringido en sesiones interactivas.
+- `CLAUDE.md`: si el push a main falla, subir a la rama de la sesión y abrir un pull request.
+
 ### 2026-09-24 (8) — Registro de pedidos y sesiones desde el celular
 - Hook de registro movido de `~/.claude/settings.json` a `.claude/settings.json` del proyecto
   (usa `$CLAUDE_PROJECT_DIR`): ahora también anota los pedidos hechos desde el celular o la nube.
