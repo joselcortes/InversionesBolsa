@@ -20,7 +20,9 @@ decisiones) y actualiza la lista de pendientes.
 ## Sesiones desde el celular o la nube (claude.ai/code)
 
 - El repo en GitHub (`joselcortes/InversionesBolsa`, privado) es la fuente de verdad. Al empezar,
-  `git pull`; al terminar, commit y push a `main` para que el PC y las demás sesiones lo vean.
+  `git pull`; al terminar, commit y push para que el PC y las demás sesiones lo vean.
+- Si el push a `main` es rechazado, sube a la rama de la sesión (ej. `claude/...`) y abre un pull
+  request hacia `main`. No generes archivos .patch ni .zip como alternativa.
 - Lo que el usuario pide queda en `informacion/registro_prompts.md` (hook del proyecto): inclúyelo
   en el commit.
 - En la nube Yahoo Finance responde HTTP 403: `registrar_mercado.mjs` no descarga; usa los

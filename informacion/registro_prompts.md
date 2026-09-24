@@ -206,3 +206,7 @@ se copiaron a mano.
 ## 24-09-2026, 3:29:32 p. m.
 
 > me gustaría poder darle ordenes al claude de mi celular y que supoiera lo mismo que sabes ahora, desde cualquier lugar sin tener el pc encendido, que puedo hacer. Ademas tengo una duda con las actualizaciones, si hago algun cambio la app sola detecta que hay actus?. Y si a lo que dijiste de mover el registro
+
+## 24-09-2026, 3:36:19 p. m.
+
+> me dice que no tengo las credenciales para hacer cambios desde mi celular ni hacer push
