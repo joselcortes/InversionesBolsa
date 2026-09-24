@@ -1,0 +1,5 @@
+{
+  "rango_inicial": "5y",
+  "simbolos": ["SPY", "QQQ", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "BRK-B", "CLP=X"],
+  "alias": { "CLP=X": "USDCLP" }
+}

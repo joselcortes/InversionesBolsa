@@ -1,0 +1,101 @@
+{
+  "nombre": "Trader",
+  "agente": "trader",
+  "tipo": "simulada",
+  "estilo": "Corto plazo (2 días a 6 semanas), técnico y momentum",
+  "moneda": "USD",
+  "capital_inicial": 10000,
+  "aporte_mensual": 0,
+  "fecha_inicio": "2026-09-21",
+  "efectivo": 5385.77,
+  "posiciones": [
+    {
+      "simbolo": "AAPL",
+      "cantidad": 7.3,
+      "precio_promedio": 339.1495,
+      "fecha_entrada": "2026-09-21",
+      "stop": 329.5,
+      "objetivo": 358.45
+    },
+    {
+      "simbolo": "NVDA",
+      "cantidad": 9.4,
+      "precio_promedio": 227.4937,
+      "fecha_entrada": "2026-09-21",
+      "stop": 216.9,
+      "objetivo": 248.67
+    }
+  ],
+  "operaciones": [
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "AAPL",
+      "cantidad": 7.3,
+      "precio": 339.1495,
+      "monto": 2475.79,
+      "stop": 329.5,
+      "objetivo": 358.45,
+      "riesgo_usd": 70.44,
+      "beneficio_riesgo": 2,
+      "motivo": "Precio en máximos de cierre (338,98) sobre MM20 324,1 / MM50 320,6 / MM200 286,6 alineadas; 1M +8,9%, 3M +14,1%; RSI14 66 (fuerte, sin sobrecompra extrema); supera máximo de 20 días (338,49). Stop 329,50 bajo mínimo del 17-sep (330,18). Riesgo 2,8% por acción; objetivo 2:1. Tamaño limitado por tope 25% de la cartera."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "NVDA",
+      "cantidad": 9.4,
+      "precio": 227.4937,
+      "monto": 2138.44,
+      "stop": 216.9,
+      "objetivo": 248.67,
+      "riesgo_usd": 99.58,
+      "beneficio_riesgo": 2,
+      "motivo": "Rebote desde 208,9 (14-sep) con 5 alzas seguidas; precio sobre MM20 219,5 / MM50 214,6 / MM200 198,6; 1S +7,8%, 3M +9,0%; RSI14 58 con espacio. Stop 216,90 bajo mínimo del 17-sep (217,15). Riesgo 4,7% por acción; objetivo 2:1 por encima del máximo 52s (236,54)."
+    }
+  ],
+  "estimaciones": [
+    {
+      "fecha": "2026-09-21",
+      "simbolo": "AAPL",
+      "horizonte": "hasta 6 semanas",
+      "rango": {
+        "pesimista": 329.5,
+        "base": 350,
+        "optimista": 358.45
+      },
+      "probabilidad": 0.4,
+      "descripcion": "Probabilidad de que el cierre toque el objetivo (358.45) antes que el stop (329.5); base = cierre esperado al 2026-11-02",
+      "fecha_verificacion": "2026-11-02",
+      "resultado_real": null,
+      "acierto": null
+    },
+    {
+      "fecha": "2026-09-21",
+      "simbolo": "NVDA",
+      "horizonte": "hasta 6 semanas",
+      "rango": {
+        "pesimista": 216.9,
+        "base": 236,
+        "optimista": 248.67
+      },
+      "probabilidad": 0.38,
+      "descripcion": "Probabilidad de que el cierre toque el objetivo (248.67) antes que el stop (216.9); base = cierre esperado al 2026-11-02",
+      "fecha_verificacion": "2026-11-02",
+      "resultado_real": null,
+      "acierto": null
+    }
+  ],
+  "historial_valor": [
+    {
+      "fecha": "2026-09-21",
+      "valor": 9997.7,
+      "spy": 773.5
+    },
+    {
+      "fecha": "2026-09-22",
+      "valor": 10017.32,
+      "spy": 773.38
+    }
+  ]
+}

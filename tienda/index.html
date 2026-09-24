@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0E14">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mi tienda</title>
+  <link rel="icon" type="image/png" href="icons/tienda.png">
+  <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+  <header class="top">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">🛍️</span>
+      <div>
+        <h1>Mi tienda</h1>
+        <p>Tus apps, siempre al día</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="apps" aria-live="polite">
+      <p class="cargando">Cargando apps…</p>
+    </section>
+
+    <section class="ayuda">
+      <h2>¿Cómo instalo o actualizo?</h2>
+      <details open>
+        <summary>Si ya tienes la app en tu celular</summary>
+        <p>Ábrela: te avisa sola cuando hay una versión nueva. También puedes ir a
+          <strong>Más → Mi tienda</strong> y tocar <strong>Actualizar</strong>. Tus datos se mantienen.</p>
+      </details>
+      <details>
+        <summary>Primera vez en un celular Android</summary>
+        <ol>
+          <li>Abre esta página en el celular y toca <strong>Descargar</strong>.</li>
+          <li>Cuando termine, toca el archivo descargado.</li>
+          <li>Si Android avisa que no permite instalar apps de esta fuente, toca <strong>Configuración</strong>
+            y activa <strong>Permitir de esta fuente</strong> para tu navegador.</li>
+          <li>Vuelve y toca <strong>Instalar</strong>.</li>
+        </ol>
+        <p class="nota">Es normal que Android muestre una advertencia: la app no viene de Play Store,
+          sino de tu propia tienda en tu Google Cloud.</p>
+      </details>
+      <details>
+        <summary>iPhone o computador</summary>
+        <p>Usa la versión web: se abre en el navegador y se actualiza sola.
+          En iPhone puedes agregarla a la pantalla de inicio desde el botón Compartir.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    Publicada en tu Firebase (Google Cloud). Cada archivo trae su huella SHA-256 para verificar que no fue alterado.
+  </footer>
+
+  <template id="tarjeta">
+    <article class="app">
+      <div class="cabecera">
+        <img class="icono" alt="" width="72" height="72">
+        <div class="info">
+          <h3 class="nombre"></h3>
+          <p class="descripcion"></p>
+          <p class="meta"></p>
+        </div>
+      </div>
+      <div class="acciones">
+        <a class="boton principal descargar" download>Descargar</a>
+        <a class="boton secundario web" target="_blank" rel="noopener">Abrir versión web</a>
+      </div>
+      <div class="novedades">
+        <h4></h4>
+        <ul></ul>
+      </div>
+      <details class="anteriores">
+        <summary>Versiones anteriores</summary>
+        <ul></ul>
+      </details>
+      <p class="huella"></p>
+    </article>
+  </template>
+
+  <script src="tienda.js"></script>
+</body>
+</html>

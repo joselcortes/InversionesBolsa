@@ -1,0 +1,98 @@
+# Bitácora del proyecto Inversiones
+
+Lo más reciente va arriba en cada sección.
+
+## Plan / pendientes
+
+- [ ] Completar en `PROMPT_MEJORAS.md` los datos del proyecto Firebase (ID, plan, correo).
+- [ ] Pasar el proyecto Firebase a plan Blaze y crear alerta de presupuesto.
+- [x] Primera ejecución de los agentes Trader e Inversionista (armar carteras iniciales).
+- [ ] Revisión del Trader (stops/objetivos) cuando haya cierres nuevos.
+- [x] Automatizar `tool/registrar_mercado.mjs` a diario (Programador de tareas de Windows).
+- [ ] Agregar a `mercado_config.json` las acciones de mi lista de seguimiento real de la app.
+- [ ] Fase 1: signo de moneda antes del número.
+- [ ] Fase 1: corregir "Hoy ganaste" (last_equity en 0 y depósitos contados como ganancia).
+- [ ] Fase 2: infraestructura Firebase (Auth, App Check, Firestore, Functions, Secret Manager).
+- [ ] Fase 3: historial de mercado guardado por función programada.
+- [ ] Fase 4: ficha de decisión con números reales.
+- [ ] Fase 5: verificación de estimaciones y backtesting.
+- [ ] Fase 6: Claude dentro de la app (Vertex AI o API de Anthropic).
+- [ ] Agregar `firebase-debug.log` al `.gitignore`.
+
+## Registro de cambios
+
+### 2026-09-24 (1) — Control desde el celular (consulta)
+- Se explicaron las opciones para operar el proyecto desde el celular: Remote Control (sesión del PC
+  controlada desde la app Claude) y sesiones/rutinas en la nube (claude.ai/code), que requieren
+  subir el proyecto a un repositorio privado de GitHub. Aún no se aplica nada.
+- Detectado: la tarea "Registrar mercado" no corrió el 23-09 a las 18:00 (1 ejecución perdida).
+
+### 2026-09-23 (4) — Primera ejecución de los agentes (precios del cierre 21-09-2026)
+- **Trader**: compró AAPL 7,3 a 339,15 (stop 329,50 / objetivo 358,45) y NVDA 9,4 a 227,49
+  (stop 216,90 / objetivo 248,67). Efectivo US$ 5.385,77; riesgo abierto US$ 170 (1,7 %).
+  Vigila MSFT (>518) y GOOGL (>360). Verificación: 2026-11-02.
+- **Inversionista**: SPY 50 %, BRK-B 12 %, QQQ 10 %, MSFT 7 %, GOOGL 6 %, AAPL 5 %, AMZN 4 %,
+  efectivo 6 %. Excluye NVDA, TSLA y META por volatilidad. Rango a 12 meses: US$ 8.986 –
+  10.544 – 12.373 (verificación 2027-09-21). Aporte de US$ 500 desde octubre 2026.
+- Reportes en `informacion/reportes/2026-09-23-*.md`. Totales verificados (US$ 10.000 cada una).
+
+### 2026-09-23 (3) — Registro de mercado automático
+- Tarea de Windows **"InversionesBolsa - Registrar mercado"**: todos los días a las 18:00
+  (hora del PC) corre `node tool\registrar_mercado.mjs`. Si el PC estaba apagado, se ejecuta al
+  encenderlo; requiere internet. Probada: resultado 0. Para verla o desactivarla: Programador de
+  tareas de Windows.
+- Hook de pedidos: ahora ignora los avisos del sistema (`<task-notification>`), que se estaban
+  registrando como si fueran pedidos.
+
+### 2026-09-23 (2) — Mercado, agentes y carteras
+- **Registro de mercado**: nuevo `tool/registrar_mercado.mjs` + `informacion/mercado_config.json`.
+  Primera descarga: 5 años diarios (1.253 días) de SPY, QQQ, AAPL, MSFT, NVDA, AMZN, GOOGL, META,
+  TSLA, BRK-B y dólar USDCLP en `informacion/historicos/`, con `resumen.md`/`resumen.json`
+  (MM20/50/200, RSI14, volatilidad, caída máxima, rendimientos). Último cierre: 21-09-2026
+  (Yahoo aún no publicaba el cierre del 22; se completa en la próxima ejecución).
+- **Agentes** (Claude Code, `.claude/agents/`): `trader` (corto plazo) e `inversionista`
+  (minoritario, largo plazo). Documentados en `informacion/AGENTES.md`.
+- **Carteras** simuladas: `informacion/carteras/trader.json` e `inversionista.json`
+  (US$ 10.000 cada una; el Inversionista aporta US$ 500/mes). Aún sin operaciones.
+- **Prompt**: nueva Fase 6 "Carteras" (varias cuentas con estrategias distintas, atribución
+  por prefijo de `client_order_id`, comparación contra SPY); Claude en la app pasa a Fase 7.
+- **Registro automático de pedidos**: hook `UserPromptSubmit` en `~/.claude/settings.json` que
+  ejecuta `tool/hooks/registrar_prompt.mjs` y escribe en `informacion/registro_prompts.md`.
+
+### 2026-09-23 (1)
+- Idioma de Claude Code configurado en español (Chile) (`~/.claude/settings.json`).
+- Creado `informacion/PROMPT_MEJORAS.md` con el plan de mejoras por fases.
+- Actualizado el prompt con una fase completa de Firebase (Fase 2).
+- Creados `informacion/BITACORA.md` y `CLAUDE.md` (memoria del proyecto).
+- No se ha modificado código de la app todavía.
+
+## Decisiones
+
+### 2026-09-23 (2)
+- "Cuentas agrupadas" se llamarán **Carteras**: cada una con capital, posiciones, ganancia y
+  estrategia propias; pueden ser simuladas o reales.
+- Los agentes operan **solo carteras simuladas** y nunca envían órdenes. Pasar a dinero real
+  requiere confirmación explícita y huella/PIN en cada orden.
+- Fuente de datos en el PC: Yahoo Finance (sin API key). Stooq se descartó: bloquea descargas
+  automáticas. Alpaca será la fuente principal cuando exista la función de Firebase.
+- Simulación: precio = último cierre ± 0,05 % de costo.
+
+### 2026-09-23 (1)
+- La memoria del proyecto vive en `CLAUDE.md` (se carga automáticamente) + esta bitácora.
+- El historial de mercado se guardará en Firestore mediante una función programada, no en el
+  teléfono, para que se registre aunque el celular esté apagado.
+- El servidor solo usará claves Alpaca paper para leer datos; nunca envía órdenes. Las claves
+  de la cuenta real quedan solo en el teléfono.
+- Claude en la app: pendiente elegir entre Vertex AI (sin API key, factura Google Cloud) y
+  API de Anthropic (key en Secret Manager).
+
+## Problemas conocidos
+
+- **Signo de moneda al final** (`1.234,56 US$`): `lib/utils/formatters.dart` usa
+  `NumberFormat.currency(locale: 'es_CL')`, que pone el símbolo al final.
+- **"Hoy ganaste" igual al total**: `AccountInfo.dayChange = equity - lastEquity`
+  (`lib/models/account_info.dart`). Si `last_equity` es 0 el resultado es todo el patrimonio,
+  y los depósitos del día se cuentan como ganancia. Afecta Inicio, Portafolio, resumen diario
+  (`automation_runner.dart`) y widget de inicio.
+- El CSP de `firebase.json` solo permite Alpaca y mindicador; hay que ampliarlo al integrar
+  Firebase en la web.

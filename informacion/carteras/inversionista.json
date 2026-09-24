@@ -1,0 +1,230 @@
+{
+  "nombre": "Inversionista",
+  "agente": "inversionista",
+  "tipo": "simulada",
+  "estilo": "Largo plazo (3+ años), diversificado, DCA y rebalanceo",
+  "moneda": "USD",
+  "capital_inicial": 10000,
+  "aporte_mensual": 500,
+  "fecha_inicio": "2026-09-21",
+  "efectivo": 600,
+  "pesos_objetivo": {
+    "SPY": 0.5,
+    "QQQ": 0.1,
+    "BRK-B": 0.12,
+    "MSFT": 0.07,
+    "GOOGL": 0.06,
+    "AAPL": 0.05,
+    "AMZN": 0.04,
+    "EFECTIVO": 0.06
+  },
+  "posiciones": [
+    {
+      "simbolo": "SPY",
+      "cantidad": 6.460893,
+      "precio_promedio": 773.8868,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.5
+    },
+    {
+      "simbolo": "QQQ",
+      "cantidad": 1.347998,
+      "precio_promedio": 741.8407,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.1
+    },
+    {
+      "simbolo": "BRK-B",
+      "cantidad": 2.389196,
+      "precio_promedio": 502.261,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.12
+    },
+    {
+      "simbolo": "MSFT",
+      "cantidad": 1.394809,
+      "precio_promedio": 501.8608,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.07
+    },
+    {
+      "simbolo": "GOOGL",
+      "cantidad": 1.689439,
+      "precio_promedio": 355.1475,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.06
+    },
+    {
+      "simbolo": "AAPL",
+      "cantidad": 1.474276,
+      "precio_promedio": 339.1495,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.05
+    },
+    {
+      "simbolo": "AMZN",
+      "cantidad": 1.546915,
+      "precio_promedio": 258.5792,
+      "fecha_entrada": "2026-09-21",
+      "stop": null,
+      "objetivo": null,
+      "peso_objetivo": 0.04
+    }
+  ],
+  "operaciones": [
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "SPY",
+      "cantidad": 6.460893,
+      "precio": 773.8868,
+      "monto": 5000,
+      "motivo": "Núcleo: mercado amplio EE.UU. (CAGR 5a 13,3%, vol 17,2%, caída máx -24,5%). Referencia de la cartera. Precio = cierre 773.5 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "QQQ",
+      "cantidad": 1.347998,
+      "precio": 741.8407,
+      "monto": 1000,
+      "motivo": "Sesgo moderado a crecimiento/tecnología (CAGR 5a 15,4%, vol 23%); limitado a 10% por correlación 0,95 con SPY y caída máx -35%. Precio = cierre 741.47 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "BRK-B",
+      "cantidad": 2.389196,
+      "precio": 502.261,
+      "monto": 1200,
+      "motivo": "Calidad y diversificador: correlación 0,58 con SPY y 0,23-0,44 con tecnológicas, beta 0,58, vol 17,2%. Amortigua caídas. Precio = cierre 502.01 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "MSFT",
+      "cantidad": 1.394809,
+      "precio": 501.8608,
+      "monto": 700,
+      "motivo": "Calidad (flujos recurrentes, balance fuerte). CAGR 5a 11,8%, vol 28%. Peso bajo por concentración tecnológica ya presente en SPY/QQQ. Precio = cierre 501.61 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "GOOGL",
+      "cantidad": 1.689439,
+      "precio": 355.1475,
+      "monto": 600,
+      "motivo": "Calidad con valoración menos exigente que el promedio del grupo (solo 5,2% sobre SMA200). CAGR 5a 20,5%, vol 32%. Precio = cierre 354.97 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "AAPL",
+      "cantidad": 1.474276,
+      "precio": 339.1495,
+      "monto": 500,
+      "motivo": "Calidad y caja; peso acotado por estar 18,4% sobre SMA200 tras +43% en 1 año. CAGR 5a 18,8%, vol 28%. Precio = cierre 338.98 +0,05%."
+    },
+    {
+      "fecha": "2026-09-21",
+      "tipo": "compra",
+      "simbolo": "AMZN",
+      "cantidad": 1.546915,
+      "precio": 258.5792,
+      "monto": 400,
+      "motivo": "Calidad (nube + comercio); peso bajo por vol 36% y caída máx -55,7% en 2022. 7,5% sobre SMA200. Precio = cierre 258.45 +0,05%."
+    }
+  ],
+  "estimaciones": [
+    {
+      "fecha": "2026-09-21",
+      "simbolo": "CARTERA",
+      "horizonte": "3 meses",
+      "rango": {
+        "pesimista": 9355,
+        "base": 10133,
+        "optimista": 10977
+      },
+      "probabilidad": 0.68,
+      "supuestos": "Valor de la cartera sin contar aportes futuros. Base: retorno 7% anual (menor al 13% histórico por valoración sobre tendencia). Pesimista/optimista = ±1 desviación estándar con vol anual 16% (vol 5a de la cartera 17% x 94% invertido). Probabilidad de quedar dentro del rango ~68%.",
+      "fecha_verificacion": "2026-12-21",
+      "resultado_real": null,
+      "acierto": null
+    },
+    {
+      "fecha": "2026-09-21",
+      "simbolo": "CARTERA",
+      "horizonte": "6 meses",
+      "rango": {
+        "pesimista": 9171,
+        "base": 10269,
+        "optimista": 11498
+      },
+      "probabilidad": 0.68,
+      "supuestos": "Valor de la cartera sin contar aportes futuros. Base: retorno 7% anual (menor al 13% histórico por valoración sobre tendencia). Pesimista/optimista = ±1 desviación estándar con vol anual 16% (vol 5a de la cartera 17% x 94% invertido). Probabilidad de quedar dentro del rango ~68%.",
+      "fecha_verificacion": "2027-03-22",
+      "resultado_real": null,
+      "acierto": null
+    },
+    {
+      "fecha": "2026-09-21",
+      "simbolo": "CARTERA",
+      "horizonte": "12 meses",
+      "rango": {
+        "pesimista": 8986,
+        "base": 10544,
+        "optimista": 12373
+      },
+      "probabilidad": 0.68,
+      "supuestos": "Valor de la cartera sin contar aportes futuros. Base: retorno 7% anual (menor al 13% histórico por valoración sobre tendencia). Pesimista/optimista = ±1 desviación estándar con vol anual 16% (vol 5a de la cartera 17% x 94% invertido). Probabilidad de quedar dentro del rango ~68%.",
+      "fecha_verificacion": "2027-09-21",
+      "resultado_real": null,
+      "acierto": null
+    }
+  ],
+  "historial_valor": [
+    {
+      "fecha": "2026-09-21",
+      "valor": 9995.3,
+      "spy": 773.5,
+      "usdclp": 947.47,
+      "aportes_acumulados": 10000,
+      "nota": "Valor a precio de cierre; diferencia con 10.000 = costo simulado 0,05%."
+    },
+    {
+      "fecha": "2026-09-22",
+      "valor": 9990.43,
+      "spy": 773.38,
+      "usdclp": null,
+      "aportes_acumulados": 10000
+    }
+  ],
+  "pesos_reales": {
+    "SPY": 0.5,
+    "QQQ": 0.1,
+    "BRK-B": 0.12,
+    "MSFT": 0.07,
+    "GOOGL": 0.06,
+    "AAPL": 0.05,
+    "AMZN": 0.04,
+    "EFECTIVO": 0.06
+  },
+  "nota_fecha": "Primera ejecución el 2026-09-23; operaciones valorizadas con el último cierre real disponible (2026-09-21).",
+  "proximo_aporte": {
+    "fecha": "primera ejecución de octubre 2026",
+    "monto": 500
+  }
+}
