@@ -21,6 +21,13 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (4) — Prueba de la rutina en la nube
+- Yahoo Finance responde **HTTP 403** desde la nube (en el PC funciona). La rutina no puede
+  descargar precios ahí; pendiente: abrir la red del entorno o usar Alpaca como fuente.
+- `tool/registrar_mercado.mjs`: si falla una descarga, el resumen se arma con lo ya guardado
+  (antes quedaba vacío) y el script termina con código 1.
+- Descargados en el PC los cierres del 23-09-2026.
+
 ### 2026-09-24 (3) — Repo en GitHub y rutina en la nube
 - Repo privado: github.com/joselcortes/InversionesBolsa (GitHub conectado a Claude con /web-setup).
 - Rutina en la nube "Inversiones – mercado y carteras" (trig_01Nrj3v32xnJrY4tx7gDYKXS): lun-vie
