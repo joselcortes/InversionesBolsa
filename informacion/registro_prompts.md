@@ -150,3 +150,11 @@ se copiaron a mano.
 ## 24-09-2026, 12:47:42 a. m.
 
 > haz todo lo necesario
+
+## 24-09-2026, 1:00:51 a. m.
+
+> que neecesito hacer para ejecutar desde mi cel
+
+## 24-09-2026, 1:04:47 a. m.
+
+> listo

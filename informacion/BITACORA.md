@@ -21,6 +21,13 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (3) — Repo en GitHub y rutina en la nube
+- Repo privado: github.com/joselcortes/InversionesBolsa (GitHub conectado a Claude con /web-setup).
+- Rutina en la nube "Inversiones – mercado y carteras" (trig_01Nrj3v32xnJrY4tx7gDYKXS): lun-vie
+  22:00 UTC (19:00 Chile en horario de verano; 18:00 desde abril). Registra mercado, revisa carteras
+  simuladas, escribe reporte y bitácora, y hace push a main. Modelo claude-sonnet-5.
+- En el PC: hacer  al empezar cada sesión. Evaluar desactivar la tarea de Windows.
+
 ### 2026-09-24 (2) — Proyecto en git
 - `git init` (rama main) y primer commit local (233 archivos). Revisados secretos: ninguno;
   keystore, key.properties, local.properties, build/ y releases/descargas/ quedan fuera.
