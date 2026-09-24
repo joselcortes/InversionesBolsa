@@ -222,3 +222,23 @@ se copiaron a mano.
 ## 24-09-2026, 3:49:43 p. m.
 
 > guarda este chat en configuraciones
+
+## 24-09-2026, 3:51:06 p. m.
+
+> claude rc
+
+## 24-09-2026, 3:51:52 p. m.
+
+> Quiero ver qué está pasando en el proyecto, en qué quedo
+
+## 24-09-2026, 3:53:46 p. m.
+
+> Puedes hacer que conectando me desde mi celular Claude pueda conectarse a Google Claude, github o cualquier otro respositorio leer la información y ejecutar?
+
+## 24-09-2026, 3:55:03 p. m.
+
+> google cloud
+
+## 24-09-2026, 4:16:07 p. m.
+
+> 4/0AXlqoi4ac3E15aLs3R8QDOZr06TL2smnHVrQV7gFWqmNVlbjvI5V5C96l6l9ygc1IrR3Og

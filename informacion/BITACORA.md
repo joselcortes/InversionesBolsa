@@ -5,6 +5,7 @@ Lo más reciente va arriba en cada sección.
 ## Plan / pendientes
 
 - [ ] Completar en `PROMPT_MEJORAS.md` los datos del proyecto Firebase (ID, plan, correo).
+- [x] Instalar gcloud y conectarlo al proyecto inversiones-cl-34686.
 - [ ] Pasar el proyecto Firebase a plan Blaze y crear alerta de presupuesto.
 - [x] Primera ejecución de los agentes Trader e Inversionista (armar carteras iniciales).
 - [ ] Revisión del Trader (stops/objetivos) cuando haya cierres nuevos.
@@ -20,6 +21,14 @@ Lo más reciente va arriba en cada sección.
 - [ ] Agregar `firebase-debug.log` al `.gitignore`.
 
 ## Registro de cambios
+
+### 2026-09-24 (11) — Google Cloud CLI en el PC (pedido desde el celular, Remote Control)
+- Instalado Google Cloud CLI 586 en `%LOCALAPPDATA%\google-cloud-sdk` (zip oficial, sin admin;
+  winget solo ofrecía instalación de equipo con UAC). Agregado al PATH del usuario.
+- Sesión iniciada como chipichipi094@gmail.com (login sin navegador). Proyecto por defecto:
+  **inversiones-cl-34686** (el de Firebase). Facturación: **desactivada** (plan Spark).
+- Verificado: GitHub (`gh`, joselcortes) y Firebase CLI con sesión iniciada; se pueden usar desde
+  el celular vía Remote Control mientras el PC esté encendido y la sesión abierta.
 
 ### 2026-09-24 (10) — Configuración guardada
 - Nuevo `informacion/CONFIGURACION.md`: resumen de esta sesión (GitHub, Claude desde el celular,
