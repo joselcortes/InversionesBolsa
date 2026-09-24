@@ -21,6 +21,21 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-09-24 (6) — Asistente IA con los agentes en la app (v1.2.0+3)
+- Nueva pantalla **Más → Asistente IA**: chat con Asistente (general), Trader e Inversionista.
+  Botón "Pedir opinión de mi cartera", sugerencias por agente e historial guardado en el teléfono.
+- Motor: **Gemini, plan gratuito** (Google AI Studio). La app llama directo a
+  `generativelanguage.googleapis.com` con la clave del usuario, guardada cifrada
+  (`flutter_secure_storage`). Modelos: alias `gemini-flash-latest` → `gemini-flash-lite-latest`.
+- Contexto que reciben los agentes: cuenta Alpaca (patrimonio, efectivo, posiciones, lista) +
+  `agentes/datos.json` (carteras simuladas, último reporte de cada agente, resumen de mercado),
+  que `tool/publicar.dart` arma y publica en Firebase Hosting en cada publicación.
+- Archivos nuevos: `lib/models/ai_agent.dart`, `lib/services/ai_service.dart`,
+  `lib/services/ai_context.dart`, `lib/screens/assistant_screen.dart`, `test/ai_agent_test.dart`.
+  Modificados: `more_screen.dart`, `firebase.json` (CSP + caché de /agentes), `tool/publicar.dart`,
+  `pubspec.yaml`.
+- En la app los agentes solo opinan: no modifican sus carteras ni envían órdenes.
+
 ### 2026-09-24 (5) — Revisión diaria automática (nube)
 - `node tool/registrar_mercado.mjs` volvió a fallar con HTTP 403 desde la nube; se usó el cierre
   real del **2026-09-23** (caída generalizada: SPY -0,72 %, GOOGL -3,80 %) ya subido por el usuario.
@@ -123,7 +138,9 @@ Lo más reciente va arriba en cada sección.
 - El servidor solo usará claves Alpaca paper para leer datos; nunca envía órdenes. Las claves
   de la cuenta real quedan solo en el teléfono.
 - Claude en la app: pendiente elegir entre Vertex AI (sin API key, factura Google Cloud) y
-  API de Anthropic (key en Secret Manager).
+  API de Anthropic (key en Secret Manager). **Actualización 2026-09-24:** por ahora se usa
+  Gemini con el plan gratuito (clave del usuario en el teléfono); se puede cambiar de motor
+  editando solo `lib/services/ai_service.dart`.
 
 ## Problemas conocidos
 
