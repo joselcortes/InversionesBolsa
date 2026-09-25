@@ -260,3 +260,21 @@ se copiaron a mano.
 > 8. git add de informacion/ solamente, commit con mensaje "Revisión diaria AAAA-MM-DD" y push a main. Si el push falla por cambios remotos, haz git pull --rebase y reintenta una vez.
 > 
 > Si hoy el mercado de EE.UU. estuvo cerrado (feriado) y no hay cierre nuevo, escribe un reporte breve indicándolo y no operes.
+
+## 25-09-2026, 7:09:26 p. m.
+
+> Revisión diaria del proyecto InversionesBolsa (rutina automática en la nube). Todo en español de Chile; montos con el signo antes (US$ 1.234,56).
+> 
+> REGLAS ABSOLUTAS: las carteras son SIMULADAS. Nunca envíes órdenes reales ni llames a la API de Alpaca para operar. No modifiques código de la app (lib/, android/, web/, etc.). Estimaciones siempre como rango y con el aviso "Referencial, no es asesoría financiera".
+> 
+> Pasos:
+> 1. Lee CLAUDE.md, informacion/AGENTES.md, las últimas entradas de informacion/BITACORA.md, informacion/carteras/trader.json e informacion/carteras/inversionista.json, y los reportes más recientes en informacion/reportes/.
+> 2. Ejecuta `node tool/registrar_mercado.mjs` para actualizar informacion/historicos/. Si falla (por ejemplo, sin acceso a internet hacia Yahoo Finance), anota el error exacto en el reporte y continúa con los datos existentes, dejando claro de qué fecha son los precios.
+> 3. Cartera Trader: con los cierres nuevos, revisa cada posición abierta (¿se tocó el stop o el objetivo? ganancia/pérdida en US$ y %), las condiciones de vigilancia (ej. MSFT > 518, GOOGL > 360) y posibles nuevas entradas siguiendo las reglas de informacion/AGENTES.md y .claude/agents/trader.md. Si corresponde, registra las operaciones simuladas en trader.json (precio = último cierre ± 0,05 % de costo) con su justificación numérica.
+> 4. Cartera Inversionista: valoriza, compara contra la distribución objetivo y contra SPY, y aplica rebalanceo o el aporte mensual de US$ 500 solo si las reglas de .claude/agents/inversionista.md lo indican para esta fecha.
+> 5. Verifica que ambos JSON sean válidos (node -e "JSON.parse(require('fs').readFileSync(...))") y que los totales cuadren.
+> 6. Escribe informacion/reportes/AAAA-MM-DD-revision.md (fecha de hoy) con: fecha de los precios, resumen de mercado, estado de cada cartera (valor, efectivo, P/G vs inicio y vs SPY), operaciones simuladas del día y motivos, alertas (stops cercanos, etc.) y el aviso referencial.
+> 7. Agrega al inicio de la sección "## Registro de cambios" de informacion/BITACORA.md una entrada "### AAAA-MM-DD — Revisión automática (nube)" con 2 a 5 viñetas.
+> 8. git add de informacion/ solamente, commit con mensaje "Revisión diaria AAAA-MM-DD" y push a main. Si el push falla por cambios remotos, haz git pull --rebase y reintenta una vez.
+> 
+> Si hoy el mercado de EE.UU. estuvo cerrado (feriado) y no hay cierre nuevo, escribe un reporte breve indicándolo y no operes.
