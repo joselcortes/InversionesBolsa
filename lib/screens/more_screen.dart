@@ -5,6 +5,7 @@ import '../models/store_catalog.dart';
 import '../providers/portfolio_provider.dart';
 import '../services/update_service.dart';
 import 'activity_screen.dart';
+import 'assistant_screen.dart';
 import 'dca_screen.dart';
 import 'learn_screen.dart';
 import 'news_screen.dart';
@@ -46,6 +47,8 @@ class MoreScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 60),
         children: [
+          item(Icons.auto_awesome_rounded, Colors.indigo, 'Asistente IA',
+              'Conversa con tus agentes Trader e Inversionista', const AssistantScreen()),
           item(Icons.school_rounded, Colors.amber, 'Aprende',
               'Qué significa cada cosa, explicado simple', const LearnScreen()),
           item(Icons.newspaper_rounded, scheme.primary, 'Noticias',

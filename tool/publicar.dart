@@ -104,12 +104,65 @@ Future<void> main(List<String> args) async {
   File('web/icons/Icon-192.png').copySync('${tienda.path}/icons/inversiones.png');
   File('web/icons/Icon-192.png').copySync('${tienda.path}/icons/tienda.png');
 
+  paso('Publicando los datos de los agentes (Asistente IA)…');
+  _armarDatosAgentes(Directory('build/web/agentes'));
+
   paso('Publicando en Firebase ($proyecto)…');
   await correr('firebase', ['deploy', '--only', 'hosting', '--project', proyecto]);
 
   stdout.writeln('\n✅ Listo.');
   stdout.writeln('   App web:    https://$proyecto.web.app/');
   stdout.writeln('   Mi tienda:  https://$proyecto.web.app/tienda/');
+}
+
+/// Junta las carteras simuladas, el último reporte de cada agente y el
+/// resumen de mercado en `agentes/datos.json`, que lee el Asistente IA de la
+/// app. Solo son datos simulados (nunca claves ni la cuenta real).
+void _armarDatosAgentes(Directory destino) {
+  if (destino.existsSync()) destino.deleteSync(recursive: true);
+  destino.createSync(recursive: true);
+
+  final carteras = <String, dynamic>{};
+  final dirCarteras = Directory('informacion/carteras');
+  if (dirCarteras.existsSync()) {
+    for (final f in dirCarteras.listSync().whereType<File>().where((f) => f.path.endsWith('.json'))) {
+      final id = f.uri.pathSegments.last.replaceAll('.json', '');
+      try {
+        carteras[id] = jsonDecode(f.readAsStringSync());
+      } catch (_) {
+        stdout.writeln('   (se omitió ${f.path}: JSON inválido)');
+      }
+    }
+  }
+
+  final reportes = <String, String>{};
+  final dirReportes = Directory('informacion/reportes');
+  if (dirReportes.existsSync()) {
+    final archivos = dirReportes.listSync().whereType<File>().where((f) => f.path.endsWith('.md')).toList()
+      ..sort((a, b) => a.path.compareTo(b.path)); // AAAA-MM-DD-agente.md: el último gana
+    for (final f in archivos) {
+      final m = RegExp(r'\d{4}-\d{2}-\d{2}-(.+)\.md$').firstMatch(f.uri.pathSegments.last);
+      if (m != null) reportes[m.group(1)!] = f.readAsStringSync();
+    }
+  }
+
+  dynamic mercado = const [];
+  final resumen = File('informacion/historicos/resumen.json');
+  if (resumen.existsSync()) {
+    try {
+      mercado = (jsonDecode(resumen.readAsStringSync()) as Map)['datos'] ?? const [];
+    } catch (_) {
+      stdout.writeln('   (resumen.json inválido: se omite el mercado)');
+    }
+  }
+
+  File('${destino.path}/datos.json').writeAsStringSync(jsonEncode({
+    'actualizado': DateTime.now().toUtc().toIso8601String(),
+    'carteras': carteras,
+    'reportes': reportes,
+    'mercado': mercado,
+  }));
+  stdout.writeln('   ${carteras.length} carteras, ${reportes.length} reportes.');
 }
 
 (String, int) _leerVersion() {

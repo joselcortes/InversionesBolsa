@@ -155,6 +155,7 @@ function indicadores(simbolo, filas) {
 // ---------------------------------------------------------------- principal
 const log = [];
 const resumen = [];
+let errores = 0;
 for (const simbolo of config.simbolos) {
   const archivo = path.join(dirHist, nombreArchivo(simbolo));
   const existentes = leerCsv(archivo);
@@ -171,6 +172,11 @@ for (const simbolo of config.simbolos) {
     log.push(`${simbolo}: +${agregadas} días (total ${filas.length})`);
   } catch (e) {
     log.push(`${simbolo}: ERROR ${e.message}`);
+    errores++;
+    // Sin descarga: el resumen se arma con lo ya guardado para no perder el símbolo.
+    if (existentes.size) {
+      resumen.push(indicadores(simbolo, [...existentes.keys()].sort().map((f) => existentes.get(f))));
+    }
   }
   await new Promise((r) => setTimeout(r, 400)); // no saturar la fuente
 }
@@ -194,3 +200,4 @@ const md = [
 fs.writeFileSync(path.join(dirHist, 'resumen.md'), md.join('\n'));
 fs.appendFileSync(path.join(dirHist, 'registro_descargas.log'), `${actualizado}\n  ${log.join('\n  ')}\n`);
 console.log(log.join('\n'));
+if (errores) process.exitCode = 1;

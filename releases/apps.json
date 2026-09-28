@@ -9,6 +9,17 @@
       "webUrl": "https://inversiones-cl-34686.web.app/",
       "releases": [
         {
+          "version": "1.2.0",
+          "build": 3,
+          "date": "2026-09-24T18:11:49.498689Z",
+          "notes": [
+            "Nuevo Asistente IA con agentes Trader e Inversionista"
+          ],
+          "apk": "https://github.com/joselcortes/inversiones-tienda/releases/download/v1.2.0/inversiones-1.2.0.apk",
+          "sha256": "8ad6e97bb6462e149db720fb954aaf8e536e259a422c40f8c1846bf53b379aee",
+          "sizeBytes": 22852192
+        },
+        {
           "version": "1.1.0",
           "build": 2,
           "date": "2026-09-23T04:37:18.603401Z",

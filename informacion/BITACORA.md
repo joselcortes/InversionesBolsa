@@ -5,6 +5,7 @@ Lo más reciente va arriba en cada sección.
 ## Plan / pendientes
 
 - [ ] Completar en `PROMPT_MEJORAS.md` los datos del proyecto Firebase (ID, plan, correo).
+- [x] Instalar gcloud y conectarlo al proyecto inversiones-cl-34686.
 - [ ] Pasar el proyecto Firebase a plan Blaze y crear alerta de presupuesto.
 - [x] Primera ejecución de los agentes Trader e Inversionista (armar carteras iniciales).
 - [ ] Revisión del Trader (stops/objetivos) cuando haya cierres nuevos.
@@ -20,6 +21,94 @@ Lo más reciente va arriba en cada sección.
 - [ ] Agregar `firebase-debug.log` al `.gitignore`.
 
 ## Registro de cambios
+
+### 2026-09-25 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos; el cierre sigue siendo
+  el 2026-09-23. Es el **tercer día hábil seguido** (24-sep x2 y 25-sep) sin poder descargar un
+  cierre nuevo desde la nube — el bloqueo de Yahoo Finance persiste sin resolverse.
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT (518) y GOOGL (360) sin activarse. No se registraron operaciones nuevas.
+- **Inversionista**: sin cambios (US$ 9.923,05, −0,72 % vs inicio); ninguna posición se desvía más
+  de 5 pp de su peso objetivo; no corresponde aporte (es en octubre).
+- Reporte: `informacion/reportes/2026-09-25-revision.md`.
+
+### 2026-09-24 — Revisión automática (nube)
+- Segunda pasada de la rutina diaria del mismo día: `registrar_mercado.mjs` volvió a fallar con
+  HTTP 403 (Yahoo bloqueado desde la nube); el cierre sigue siendo el 2026-09-23, sin novedades
+  respecto a la revisión de esta mañana.
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT (518) y GOOGL (360) sin activarse. No se registraron operaciones nuevas.
+- **Inversionista**: sin cambios (US$ 9.923,05, −0,72 % vs inicio); ninguna posición se desvía más
+  de 5 pp de su peso objetivo; no corresponde aporte (es en octubre).
+- Reporte: `informacion/reportes/2026-09-24-revision.md`.
+
+### 2026-09-24 (11) — Google Cloud CLI en el PC (pedido desde el celular, Remote Control)
+- Instalado Google Cloud CLI 586 en `%LOCALAPPDATA%\google-cloud-sdk` (zip oficial, sin admin;
+  winget solo ofrecía instalación de equipo con UAC). Agregado al PATH del usuario.
+- Sesión iniciada como chipichipi094@gmail.com (login sin navegador). Proyecto por defecto:
+  **inversiones-cl-34686** (el de Firebase). Facturación: **desactivada** (plan Spark).
+- Verificado: GitHub (`gh`, joselcortes) y Firebase CLI con sesión iniciada; se pueden usar desde
+  el celular vía Remote Control mientras el PC esté encendido y la sesión abierta.
+
+### 2026-09-24 (10) — Configuración guardada
+- Nuevo `informacion/CONFIGURACION.md`: resumen de esta sesión (GitHub, Claude desde el celular,
+  rutina en la nube, registro de pedidos, publicación y Asistente IA). Enlazado desde `CLAUDE.md`.
+- Diagnóstico: el celular usaba el chat normal (no Claude Code), que no puede hacer push.
+
+### 2026-09-24 (9) — Push rechazado desde el celular
+- Las sesiones del celular no pueden hacer push (por eso el Asistente IA llegó como .patch). La
+  rutina diaria sí pudo subir a main. Causa probable: la app de GitHub de Claude sin permiso de
+  escritura o push a main restringido en sesiones interactivas.
+- `CLAUDE.md`: si el push a main falla, subir a la rama de la sesión y abrir un pull request.
+
+### 2026-09-24 (8) — Registro de pedidos y sesiones desde el celular
+- Hook de registro movido de `~/.claude/settings.json` a `.claude/settings.json` del proyecto
+  (usa `$CLAUDE_PROJECT_DIR`): ahora también anota los pedidos hechos desde el celular o la nube.
+- `CLAUDE.md`: nueva sección para sesiones en la nube (git pull/push, Yahoo 403, publicar solo en PC).
+
+### 2026-09-24 (7) — Publicada la versión 1.2.0 (Asistente IA)
+- Aplicado `asistente-ia.patch` (git am). flutter analyze: sin problemas; flutter test: 35 OK.
+- Publicado con OK del usuario: APK 1.2.0+3 en GitHub (inversiones-tienda v1.2.0, SHA-256
+  8ad6e97b…379aee), catálogo de la tienda, web y `agentes/datos.json` en Firebase.
+- Advertido: datos.json es público (solo carteras simuladas) y el asistente envía la cuenta
+  Alpaca a Gemini (plan gratuito: Google puede usar los datos).
+
+### 2026-09-24 (6) — Asistente IA con los agentes en la app (v1.2.0+3)
+- Nueva pantalla **Más → Asistente IA**: chat con Asistente (general), Trader e Inversionista.
+  Botón "Pedir opinión de mi cartera", sugerencias por agente e historial guardado en el teléfono.
+- Motor: **Gemini, plan gratuito** (Google AI Studio). La app llama directo a
+  `generativelanguage.googleapis.com` con la clave del usuario, guardada cifrada
+  (`flutter_secure_storage`). Modelos: alias `gemini-flash-latest` → `gemini-flash-lite-latest`.
+- Contexto que reciben los agentes: cuenta Alpaca (patrimonio, efectivo, posiciones, lista) +
+  `agentes/datos.json` (carteras simuladas, último reporte de cada agente, resumen de mercado),
+  que `tool/publicar.dart` arma y publica en Firebase Hosting en cada publicación.
+- Archivos nuevos: `lib/models/ai_agent.dart`, `lib/services/ai_service.dart`,
+  `lib/services/ai_context.dart`, `lib/screens/assistant_screen.dart`, `test/ai_agent_test.dart`.
+  Modificados: `more_screen.dart`, `firebase.json` (CSP + caché de /agentes), `tool/publicar.dart`,
+  `pubspec.yaml`.
+- En la app los agentes solo opinan: no modifican sus carteras ni envían órdenes.
+
+### 2026-09-24 (5) — Revisión diaria automática (nube)
+- `node tool/registrar_mercado.mjs` volvió a fallar con HTTP 403 desde la nube; se usó el cierre
+  real del **2026-09-23** (caída generalizada: SPY -0,72 %, GOOGL -3,80 %) ya subido por el usuario.
+- **Trader**: AAPL y NVDA retrocedieron con el mercado sin tocar stop/objetivo; ninguna condición
+  de vigilancia se cumplió (MSFT 500,59 < 518, GOOGL 337,83 < 360, cada vez más lejos); se descartó
+  "comprar la caída" en GOOGL/AMZN por falta de tendencia a favor. **No operó.** Cartera en
+  US$ 9.965,81 (-0,34 % desde el inicio, mejor que SPY -0,74 % gracias al 54 % en efectivo).
+  Reporte: `informacion/reportes/2026-09-24-trader.md`.
+- **Inversionista**: valorizó en US$ 9.923,05 (-0,72 %, prácticamente igual a SPY -0,74 %); la
+  caída de GOOGL solo desvió su peso -0,25 pp (muy bajo el umbral de 5 pp), sin tesis rota; no
+  correspondía aporte (es en octubre). **Sin cambios en posiciones.**
+  Reporte: `informacion/reportes/2026-09-24-inversionista.md`.
+- Nota: la primera pasada de esta revisión se hizo por error con el cierre del 22-sep (antes de
+  que llegara el push del usuario con el 23-sep); se descartó y se rehizo con el dato correcto.
+
+### 2026-09-24 (4) — Prueba de la rutina en la nube
+- Yahoo Finance responde **HTTP 403** desde la nube (en el PC funciona). La rutina no puede
+  descargar precios ahí; pendiente: abrir la red del entorno o usar Alpaca como fuente.
+- `tool/registrar_mercado.mjs`: si falla una descarga, el resumen se arma con lo ya guardado
+  (antes quedaba vacío) y el script termina con código 1.
+- Descargados en el PC los cierres del 23-09-2026.
 
 ### 2026-09-24 (3) — Repo en GitHub y rutina en la nube
 - Repo privado: github.com/joselcortes/InversionesBolsa (GitHub conectado a Claude con /web-setup).
@@ -81,6 +170,10 @@ Lo más reciente va arriba en cada sección.
 
 ## Decisiones
 
+### 2026-09-24
+- El repositorio vive solo en **GitHub** (privado). No se usa GitLab: Claude Code en la nube y
+  en el celular solo trabaja con GitHub.
+
 ### 2026-09-23 (2)
 - "Cuentas agrupadas" se llamarán **Carteras**: cada una con capital, posiciones, ganancia y
   estrategia propias; pueden ser simuladas o reales.
@@ -97,7 +190,9 @@ Lo más reciente va arriba en cada sección.
 - El servidor solo usará claves Alpaca paper para leer datos; nunca envía órdenes. Las claves
   de la cuenta real quedan solo en el teléfono.
 - Claude en la app: pendiente elegir entre Vertex AI (sin API key, factura Google Cloud) y
-  API de Anthropic (key en Secret Manager).
+  API de Anthropic (key en Secret Manager). **Actualización 2026-09-24:** por ahora se usa
+  Gemini con el plan gratuito (clave del usuario en el teléfono); se puede cambiar de motor
+  editando solo `lib/services/ai_service.dart`.
 
 ## Problemas conocidos
 

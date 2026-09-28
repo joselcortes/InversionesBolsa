@@ -210,17 +210,25 @@
       "spy": 773.38,
       "usdclp": null,
       "aportes_acumulados": 10000
+    },
+    {
+      "fecha": "2026-09-23",
+      "valor": 9923.05,
+      "spy": 767.81,
+      "usdclp": 960.98,
+      "aportes_acumulados": 10000,
+      "nota": "Caída generalizada del día (GOOGL -3,80%, SPY -0,72%). Revisión del 2026-09-24: sin cambios en posiciones, no corresponde aporte ni rebalanceo."
     }
   ],
   "pesos_reales": {
-    "SPY": 0.5,
-    "QQQ": 0.1,
-    "BRK-B": 0.12,
-    "MSFT": 0.07,
-    "GOOGL": 0.06,
-    "AAPL": 0.05,
-    "AMZN": 0.04,
-    "EFECTIVO": 0.06
+    "SPY": 0.4999,
+    "QQQ": 0.1007,
+    "BRK-B": 0.1221,
+    "MSFT": 0.0704,
+    "GOOGL": 0.0575,
+    "AAPL": 0.0501,
+    "AMZN": 0.0389,
+    "EFECTIVO": 0.0605
   },
   "nota_fecha": "Primera ejecución el 2026-09-23; operaciones valorizadas con el último cierre real disponible (2026-09-21).",
   "proximo_aporte": {
