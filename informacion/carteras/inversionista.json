@@ -7,7 +7,7 @@
   "capital_inicial": 10000,
   "aporte_mensual": 500,
   "fecha_inicio": "2026-09-21",
-  "efectivo": 600,
+  "efectivo": 630,
   "pesos_objetivo": {
     "SPY": 0.5,
     "QQQ": 0.1,
@@ -21,8 +21,8 @@
   "posiciones": [
     {
       "simbolo": "SPY",
-      "cantidad": 6.460893,
-      "precio_promedio": 773.8868,
+      "cantidad": 6.786332,
+      "precio_promedio": 773.6138,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -30,8 +30,8 @@
     },
     {
       "simbolo": "QQQ",
-      "cantidad": 1.347998,
-      "precio_promedio": 741.8407,
+      "cantidad": 1.415422,
+      "precio_promedio": 741.8283,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -39,8 +39,8 @@
     },
     {
       "simbolo": "BRK-B",
-      "cantidad": 2.389196,
-      "precio_promedio": 502.261,
+      "cantidad": 2.50744,
+      "precio_promedio": 502.5045,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -48,8 +48,8 @@
     },
     {
       "simbolo": "MSFT",
-      "cantidad": 1.394809,
-      "precio_promedio": 501.8608,
+      "cantidad": 1.464692,
+      "precio_promedio": 501.8121,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -57,8 +57,8 @@
     },
     {
       "simbolo": "GOOGL",
-      "cantidad": 1.689439,
-      "precio_promedio": 355.1475,
+      "cantidad": 1.778197,
+      "precio_promedio": 354.2915,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -66,8 +66,8 @@
     },
     {
       "simbolo": "AAPL",
-      "cantidad": 1.474276,
-      "precio_promedio": 339.1495,
+      "cantidad": 1.548419,
+      "precio_promedio": 339.0556,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -75,8 +75,8 @@
     },
     {
       "simbolo": "AMZN",
-      "cantidad": 1.546915,
-      "precio_promedio": 258.5792,
+      "cantidad": 1.627109,
+      "precio_promedio": 258.1265,
       "fecha_entrada": "2026-09-21",
       "stop": null,
       "objetivo": null,
@@ -146,6 +146,78 @@
       "precio": 258.5792,
       "monto": 400,
       "motivo": "Calidad (nube + comercio); peso bajo por vol 36% y caída máx -55,7% en 2022. 7,5% sobre SMA200. Precio = cierre 258.45 +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "aporte",
+      "simbolo": "EFECTIVO",
+      "cantidad": null,
+      "precio": null,
+      "monto": 500,
+      "motivo": "Aporte mensual de octubre 2026 (primera ejecución del mes), según regla DCA del agente Inversionista. Sin cierre nuevo disponible (Yahoo Finance con HTTP 403 desde la nube); se invierte con el último cierre real, el del 2026-09-23."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "SPY",
+      "cantidad": 0.325439,
+      "precio": 768.1939,
+      "monto": 250,
+      "motivo": "Aporte de octubre repartido según peso objetivo (50%): US$ 250. Precio = cierre 2026-09-23 (767,81, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "QQQ",
+      "cantidad": 0.067424,
+      "precio": 741.5806,
+      "monto": 50,
+      "motivo": "Aporte de octubre repartido según peso objetivo (10%): US$ 50. Precio = cierre 2026-09-23 (741,21, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "BRK-B",
+      "cantidad": 0.118244,
+      "precio": 507.4236,
+      "monto": 60,
+      "motivo": "Aporte de octubre repartido según peso objetivo (12%): US$ 60. Precio = cierre 2026-09-23 (507,17, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "MSFT",
+      "cantidad": 0.069883,
+      "precio": 500.8403,
+      "monto": 35,
+      "motivo": "Aporte de octubre repartido según peso objetivo (7%): US$ 35. Precio = cierre 2026-09-23 (500,59, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "GOOGL",
+      "cantidad": 0.088758,
+      "precio": 337.9989,
+      "monto": 30,
+      "motivo": "Aporte de octubre repartido según peso objetivo (6%): US$ 30. Precio = cierre 2026-09-23 (337,83, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "AAPL",
+      "cantidad": 0.074143,
+      "precio": 337.1885,
+      "monto": 25,
+      "motivo": "Aporte de octubre repartido según peso objetivo (5%): US$ 25. Precio = cierre 2026-09-23 (337,02, único disponible) +0,05%."
+    },
+    {
+      "fecha": "2026-10-01",
+      "tipo": "compra",
+      "simbolo": "AMZN",
+      "cantidad": 0.080194,
+      "precio": 249.3946,
+      "monto": 20,
+      "motivo": "Aporte de octubre repartido según peso objetivo (4%): US$ 20. Precio = cierre 2026-09-23 (249,27, único disponible) +0,05%. Resto del aporte (US$ 30, 6%) queda en efectivo según peso objetivo."
     }
   ],
   "estimaciones": [
@@ -218,21 +290,29 @@
       "usdclp": 960.98,
       "aportes_acumulados": 10000,
       "nota": "Caída generalizada del día (GOOGL -3,80%, SPY -0,72%). Revisión del 2026-09-24: sin cambios en posiciones, no corresponde aporte ni rebalanceo."
+    },
+    {
+      "fecha": "2026-10-01",
+      "valor": 10422.81,
+      "spy": 767.81,
+      "usdclp": 960.98,
+      "aportes_acumulados": 10500,
+      "nota": "Aporte mensual de octubre (US$ 500) invertido según peso objetivo. Sin cierre nuevo: Yahoo Finance con HTTP 403 desde la nube por sexta ejecución seguida; se usa el mismo cierre del 2026-09-23 (ya eran 4 días hábiles sin dato nuevo al 28-sep, y la rutina no se ejecutó el 29 ni el 30 de septiembre)."
     }
   ],
   "pesos_reales": {
     "SPY": 0.4999,
     "QQQ": 0.1007,
-    "BRK-B": 0.1221,
-    "MSFT": 0.0704,
-    "GOOGL": 0.0575,
+    "BRK-B": 0.122,
+    "MSFT": 0.0703,
+    "GOOGL": 0.0576,
     "AAPL": 0.0501,
     "AMZN": 0.0389,
-    "EFECTIVO": 0.0605
+    "EFECTIVO": 0.0604
   },
-  "nota_fecha": "Primera ejecución el 2026-09-23; operaciones valorizadas con el último cierre real disponible (2026-09-21).",
+  "nota_fecha": "Primera ejecución el 2026-09-23; operaciones valorizadas con el último cierre real disponible (2026-09-21). Aporte de octubre (2026-10-01) valorizado con el último cierre real disponible (2026-09-23), por bloqueo persistente de Yahoo Finance desde la nube.",
   "proximo_aporte": {
-    "fecha": "primera ejecución de octubre 2026",
+    "fecha": "primera ejecución de noviembre 2026",
     "monto": 500
   }
 }

@@ -22,6 +22,19 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-10-01 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos (sexta ejecución
+  seguida bloqueada); el cierre más reciente disponible sigue siendo el 2026-09-23. Además, la
+  rutina **no se ejecutó el 29 ni el 30 de septiembre** (dos días hábiles sin ninguna revisión).
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT (518) y GOOGL (360) sin activarse.
+- **Inversionista**: primera ejecución de octubre → **aporte mensual de US$ 500**, repartido
+  según peso objetivo (incl. 6 % a efectivo) con el cierre del 23-sep. Efectivo US$ 600 → 630;
+  valor de la cartera US$ 10.422,81 sobre US$ 10.500 aportados (−0,74 %, en línea con SPY).
+  Ninguna posición se desvía más de 5 pp del objetivo: no corresponde rebalanceo adicional.
+  Próximo aporte: primera ejecución de noviembre 2026.
+- Reporte: `informacion/reportes/2026-10-01-revision.md`.
+
 ### 2026-09-28 — Revisión automática (nube)
 - `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos; el cierre sigue siendo
   el 2026-09-23. Es la **cuarta revisión automática seguida** sin datos nuevos (24-sep x2, 25-sep
