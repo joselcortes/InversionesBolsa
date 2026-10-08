@@ -22,6 +22,18 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-10-08 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos (undécima ejecución
+  seguida bloqueada); el cierre más reciente disponible sigue siendo el 2026-09-23 (15 días
+  calendario / 11 días hábiles atrás), pese a que hoy (jueves) fue día hábil en EE.UU.
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT y GOOGL sin cumplir condiciones de vigilancia. Sin operaciones nuevas.
+- **Inversionista**: sin cambios (US$ 10.422,81); no corresponde aporte (ya se hizo el 01-oct) ni
+  rebalanceo (todas las desviaciones bajo 5 pp).
+- Reporte: `informacion/reportes/2026-10-08-revision.md`.
+- El bloqueo de Yahoo Finance lleva ya 11 ejecuciones automáticas seguidas sin dato nuevo; se
+  recomienda evaluar una fuente de datos alternativa o abrir la red del entorno hacia Yahoo.
+
 ### 2026-10-07 — Revisión automática (nube)
 - `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos (décima ejecución
   seguida bloqueada); el cierre más reciente disponible sigue siendo el 2026-09-23 (14 días
