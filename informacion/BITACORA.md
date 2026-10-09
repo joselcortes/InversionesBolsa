@@ -22,6 +22,17 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-10-09 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos (duodécima ejecución
+  seguida bloqueada); el cierre más reciente disponible sigue siendo el 2026-09-23 (16 días
+  calendario / 12 días hábiles atrás), pese a que hoy (viernes) fue día hábil en EE.UU.
+- **Trader**: sin cambios (US$ 9.965,81, −0,34 % vs inicio); AAPL y NVDA sin tocar stop/objetivo;
+  MSFT y GOOGL siguen bajo sus niveles de vigilancia. Sin operaciones nuevas.
+- **Inversionista**: sin cambios (US$ 10.422,81, aportes US$ 10.500); no corresponde aporte
+  (ya se hizo el 01-oct) ni rebalanceo (ninguna desviación supera 5 pp).
+- Reporte: `informacion/reportes/2026-10-09-revision.md`. Sigue pendiente una fuente de datos
+  alternativa (ej. Alpaca) o abrir la red del entorno hacia Yahoo Finance.
+
 ### 2026-10-08 — Revisión automática (nube)
 - `registrar_mercado.mjs` volvió a fallar con HTTP 403 en los 11 símbolos (undécima ejecución
   seguida bloqueada); el cierre más reciente disponible sigue siendo el 2026-09-23 (15 días

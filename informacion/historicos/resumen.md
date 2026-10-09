@@ -1,6 +1,6 @@
 # Resumen de mercado
 
-Actualizado: 2026-10-08T22:09:41.141Z · Fuente: Yahoo Finance (referencial)
+Actualizado: 2026-10-09T22:12:12.595Z · Fuente: Yahoo Finance (referencial)
 
 | Símbolo | Fecha | Cierre | Día % | 1M % | 3M % | 1A % | MM50 | MM200 | RSI14 | Vol. 1A % | Caída máx. 1A % |
 |---|---|---|---|---|---|---|---|---|---|---|---|
