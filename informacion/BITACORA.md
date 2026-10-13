@@ -22,6 +22,18 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-10-13 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con "fetch failed" en los 11 símbolos: decimocuarta
+  ejecución automática seguida sin datos nuevos (20 días calendario / 14 hábiles desde el
+  cierre del 23-sep). Hoy fue día hábil normal en EE.UU., así que el bloqueo sigue siendo de
+  red del entorno, no un feriado.
+- Carteras Trader e Inversionista sin cambios: no se tocó ningún stop/objetivo ni condición de
+  vigilancia con el cierre del 23-sep, y no corresponde aporte ni rebalanceo (aporte de octubre
+  ya hecho el 01-oct). Sin operaciones nuevas.
+- Reporte: `informacion/reportes/2026-10-13-revision.md`.
+- Pendiente: evaluar fuente de datos alternativa (Alpaca) o abrir la red del entorno hacia
+  Yahoo Finance; el bloqueo ya lleva casi 3 semanas sin interrupción.
+
 ### 2026-10-12 — Revisión automática (nube)
 - `registrar_mercado.mjs` volvió a fallar, ahora con "fetch failed" en los 11 símbolos
   (decimotercera ejecución seguida bloqueada); el cierre más reciente disponible sigue siendo el
