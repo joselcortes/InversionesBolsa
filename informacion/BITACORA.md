@@ -22,6 +22,15 @@ Lo más reciente va arriba en cada sección.
 
 ## Registro de cambios
 
+### 2026-10-14 — Revisión automática (nube)
+- `registrar_mercado.mjs` volvió a fallar con "fetch failed" en los 11 símbolos: decimoquinta
+  ejecución automática seguida sin dato nuevo (último cierre real sigue siendo 2026-09-23, 21 días
+  calendario / 15 días hábiles atrás).
+- Sin cierre nuevo, Trader (US$ 9.965,81) e Inversionista (US$ 10.422,81) quedan sin cambios;
+  ningún stop/objetivo del Trader se tocó y ninguna desviación del Inversionista supera el margen
+  de rebalanceo (5 pp). No se registraron operaciones.
+- Reporte: `informacion/reportes/2026-10-14-revision.md`.
+
 ### 2026-10-13 — Revisión automática (nube)
 - `registrar_mercado.mjs` volvió a fallar con "fetch failed" en los 11 símbolos: decimocuarta
   ejecución automática seguida sin datos nuevos (20 días calendario / 14 hábiles desde el
